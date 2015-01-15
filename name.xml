@@ -4,35 +4,35 @@
 <name>Mislost</name>
 <age>27</age>
 <sex>male</sex>
-<id>00001</di>
+<id>00001</id>
 </person>
 
 <person>
 <name>Falls</name>
 <age>35</age>
 <sex>male</sex>
-<id>00002</di>
+<id>00002</id>
 </person>
 
 <person>
 <name>Hoyang</name>
 <age>24</age>
 <sex>male</sex>
-<id>00003</di>
+<id>00003</id>
 </person>
 
 <person>
 <name>Xiaohong</name>
 <age>18</age>
 <sex>female</sex>
-<id>00004</di>
+<id>00004</id>
 </person>
 
 <person>
 <name>Xiaoqian</name>
 <age>25</age>
 <sex>female</sex>
-<id>00005</di>
+<id>00005</id>
 </person>
 </company>
 
