@@ -1,3 +1,4 @@
+<company name="my company">
 <person>
 <name>Mislost</name>
 <age>27</age>
@@ -32,5 +33,6 @@
 <sex>female</sex>
 <id>00005</di>
 </person>
+</company>
 
 
