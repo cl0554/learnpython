@@ -9,6 +9,5 @@ nodes = root.childNodes
 for node in nodes:
 	print '*********************************'
 	for i in node.childNodes:
-
 		if i.nodeType == node.ELEMENT_NODE:
 			print '%s : %s' % (i.nodeName,  i.childNodes[0].data)
