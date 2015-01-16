@@ -10,4 +10,7 @@ for node in nodes:
 	print '*********************************'
 	for i in node.childNodes:
 		if i.nodeType == node.ELEMENT_NODE:
-			print '%s : %s' % (i.nodeName,  i.childNodes[0].data)
+			tag = i.nodeName
+			content = i.childNodes[0].data
+			#print '%s : %s' % (i.nodeName,  i.childNodes[0].data)
+			print '%s: %s' % (tag, content)
