@@ -19,7 +19,7 @@ class index:
 		#login(username,password)
 		if username in passwd_dict.keys():
 			if password == passwd_dict[username]:
-				return render.login_success()
+				return render.login_success( username)
 			else:
 		 		return render.login_failed()
 		else:
