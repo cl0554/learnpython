@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 import sys
 import shutil
@@ -15,25 +16,26 @@ def show_xml(user=None, value=None):
 			for node in nodes:
 				if node.nodeType == node.ELEMENT_NODE:	
 					if node.getAttribute('name') == user:
-						print node.getAttribute('name')
+						print node.getAttribute('name') + '<br/>'
 						for i in node.childNodes:
 							if i.nodeType == node.ELEMENT_NODE:
-								print i.childNodes[0].data
+								print i.childNodes[0].data + '<br/>'
 		else:
 			print "Errors!Don't have %s user!" % user 
 	else:	
 		for node in nodes:
 			if node.nodeType == node.ELEMENT_NODE:
+				print '<hr>'
 				if value:
 					print '# ' + node.getAttribute('name')
 				else:
-					print node.getAttribute('name')
+					print '<font size="+2" color="red" >' + node.getAttribute('name') + '</font>' + '<br/>'
 				for i in node.childNodes:
 					if i.nodeType == node.ELEMENT_NODE:
 						if value:
 							print 'Allow from ' + i.childNodes[0].data 
 						else:
-							print i.childNodes[0].data
+							print i.childNodes[0].data + '<br/>'
 def create_conf():
 	output=sys.stdout
 	outputfile = open('./conf/proxy.conf', 'w')
@@ -60,7 +62,7 @@ def create_html():
 	outputfile = open('./templates/show_ip.html', 'w')
 	sys.stdout = outputfile
 	print '<a href="addip">添加IP</a><br/>'
-	print '<a href="delip">删除IP</a>'
+	print '<a href="delip">删除IP</a><br/>'
 	show_xml()
 	outputfile.close()
 	sys.stdout = output

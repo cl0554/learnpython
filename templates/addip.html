@@ -1,5 +1,23 @@
-<form action="/addip" method="POST">
+<script>
+
+function check(){
+if (document.theform.name.value=="" || document.theform.name.value==null){
+alert("用户名不能为空！")
+return False
+}
+if (document.theform.ip.value=="" || document.theform.name.value==null){
+alert("IP不能为空:")
+}
+else
+{return True}
+}
+</script>
+
+
+
+
+<form name="theform" action="/addip" method="POST" onsubmit="return check()">
+用户名：<input type="text" name="name"><br/>
 IP地址：<input type="text" name="ip">
-用户：<input type="text" name="name">
-<input type="submit">
+<input type="submit" value="提交">
 </form>

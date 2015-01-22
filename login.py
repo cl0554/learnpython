@@ -1,5 +1,5 @@
 #!/usr/bin/python
-## encoding = "UTF-8"
+# -*- coding: utf-8 -*-
 import sys
 import web
 
@@ -10,7 +10,8 @@ render = web.template.render('templates/')
 urls = (
 	'/login', 'index',
 	'/addip', 'addip',
-	'/delip', 'delip'
+	'/delip', 'delip',
+	'/java', 'java'
 )
 
 class index:
@@ -53,7 +54,9 @@ class delip:
 		apachexml.create_html()
 		return render.show_ip()
 
-			
+class java:
+	def GET(self):
+		return render.java()	
 
 
 if __name__ == '__main__':
