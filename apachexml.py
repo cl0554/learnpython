@@ -59,7 +59,8 @@ def create_html():
 	output=sys.stdout
 	outputfile = open('./templates/show_ip.html', 'w')
 	sys.stdout = outputfile
-	print '<a href="addip">ADD IP</a>'
+	print '<a href="addip">添加IP</a><br/>'
+	print '<a href="delip">删除IP</a>'
 	show_xml()
 	outputfile.close()
 	sys.stdout = output

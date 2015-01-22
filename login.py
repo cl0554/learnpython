@@ -1,4 +1,5 @@
 #!/usr/bin/python
+## encoding = "UTF-8"
 import sys
 import web
 
@@ -8,7 +9,8 @@ passwd_dict = {"mislost":"admin1234","falls":"123456"}
 render = web.template.render('templates/')
 urls = (
 	'/login', 'index',
-	'/addip', 'addip'
+	'/addip', 'addip',
+	'/delip', 'delip'
 )
 
 class index:
@@ -27,6 +29,7 @@ class index:
 		 		return render.login_failed()
 		else:
 			return render.username_errors()
+
 class addip:
 	def GET(self):
 		return render.addip()
@@ -39,6 +42,16 @@ class addip:
 		apachexml.create_html()
 		return render.show_ip()
 
+class delip:
+	def GET(self):
+		return render.delip()
+		
+	def POST(self):
+		i = web.input()
+		ip = i.ip
+		apachexml.delete_ip(ip)
+		apachexml.create_html()
+		return render.show_ip()
 
 			
 
