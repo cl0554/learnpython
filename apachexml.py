@@ -57,7 +57,7 @@ def create_conf():
 
 def create_html():
 	output=sys.stdout
-	outputfile = open('/root/learngit/html/templates/show_ip.html', 'w')
+	outputfile = open('./templates/show_ip.html', 'w')
 	sys.stdout = outputfile
 	print '<a href="addip">ADD IP</a>'
 	show_xml()
